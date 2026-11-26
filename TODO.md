@@ -17,10 +17,20 @@ See PLAN.md for full context.
       variant set (Style=Primary/Secondary x Size=Medium/Large, pill shape)
       and a Card component (Title/Body text properties) — all bound to
       tokens with WEB code syntax (--color-*, --spacing-*, --radius-*).
-- [ ] Port these tokens into Tailwind v4 `@theme` in globals.css
-- [ ] Port Button/Card as React components matching the Figma bindings
-- [ ] Section/container spacing component (not yet modeled in Figma —
-      simple enough to define directly in code)
+- [x] Ported tokens into Tailwind v4 `@theme` in `src/app/globals.css` —
+      variable names match the Figma WEB code syntax exactly (`--color-*`,
+      `--spacing-*`, `--radius-*`); removed the default dark-mode media
+      query since the brief calls for a white background only.
+- [x] `src/components/Button.tsx` — Primary/Secondary x Medium/Large,
+      `rounded-full`, href-or-onClick polymorphic (Link vs button).
+- [x] `src/components/Card.tsx` — Title + children, matches the Figma
+      Card's padding/radius/border bindings.
+- [x] `src/components/Section.tsx` — max-w-6xl container + generous
+      vertical padding (`py-4xl`), for consistent section spacing.
+- [x] Smoke-tested all three in a throwaway `/preview` route: confirmed
+      in the compiled CSS that `py-sm`→8px, `px-lg`→24px, `rounded-lg`→16px,
+      `bg-accent-default`→`var(--color-accent-default)`, matching Figma
+      exactly. Route removed after verification.
 
 ## 3. Sections (static content)
 - [ ] Hero — eyebrow, headline, subheadline, primary + secondary CTA
