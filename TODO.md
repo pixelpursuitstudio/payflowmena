@@ -5,7 +5,9 @@ See PLAN.md for full context.
 ## 1. Scaffold
 - [x] Create Next.js (App Router) + TypeScript + Tailwind project in this directory
 - [x] Initial commit
-- [ ] Link project to Vercel, deploy skeleton for a live preview URL
+- [x] Link project to Vercel, deploy skeleton for a live preview URL
+      (<https://payflowmena.vercel.app> — fixed a framework-detection issue
+      that caused a 404 on the root route)
 
 ## 2. Design System
 - [ ] Set up Tailwind theme: white background, navy/slate text, teal/emerald accent
