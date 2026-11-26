@@ -10,9 +10,17 @@ See PLAN.md for full context.
       that caused a 404 on the root route)
 
 ## 2. Design System
-- [ ] Set up Tailwind theme: white background, navy/slate text, teal/emerald accent
-- [ ] Base typography scale, container/section spacing
-- [ ] Shared Button, Card, Section components
+
+- [x] Built in Figma first: <https://www.figma.com/design/qHJuNNm8CLXplYMq4rGNhY>
+      ("PayFlow MENA — Design System"). Foundations page has color/spacing/
+      radius variables + 9 Geist text styles; Components page has a Button
+      variant set (Style=Primary/Secondary x Size=Medium/Large, pill shape)
+      and a Card component (Title/Body text properties) — all bound to
+      tokens with WEB code syntax (--color-*, --spacing-*, --radius-*).
+- [ ] Port these tokens into Tailwind v4 `@theme` in globals.css
+- [ ] Port Button/Card as React components matching the Figma bindings
+- [ ] Section/container spacing component (not yet modeled in Figma —
+      simple enough to define directly in code)
 
 ## 3. Sections (static content)
 - [ ] Hero — eyebrow, headline, subheadline, primary + secondary CTA
