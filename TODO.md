@@ -3,8 +3,8 @@
 See PLAN.md for full context.
 
 ## 1. Scaffold
-- [ ] Create Next.js (App Router) + TypeScript + Tailwind project in this directory
-- [ ] Initial commit, push to git
+- [x] Create Next.js (App Router) + TypeScript + Tailwind project in this directory
+- [x] Initial commit
 - [ ] Link project to Vercel, deploy skeleton for a live preview URL
 
 ## 2. Design System
