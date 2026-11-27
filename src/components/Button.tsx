@@ -52,10 +52,20 @@ export function Button({
 
   if ("href" in props && props.href) {
     const { href } = props;
+    const isInternal = href.startsWith("/") || href.startsWith("#");
+
+    if (isInternal) {
+      return (
+        <Link href={href} className={classes}>
+          {children}
+        </Link>
+      );
+    }
+
     return (
-      <Link href={href} className={classes}>
+      <a href={href} className={classes}>
         {children}
-      </Link>
+      </a>
     );
   }
 

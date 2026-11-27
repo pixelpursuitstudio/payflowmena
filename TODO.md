@@ -68,8 +68,18 @@ See PLAN.md for full context.
       copy, labels, and computed output.
 
 ## 5. CTA Targets
-- [ ] Decide dummy target for CTAs (Calendly embed placeholder vs. mailto vs. anchor)
-- [ ] Wire all CTA buttons consistently
+- [x] Decided `mailto:demo@payflowmena.com` as the dummy demo-booking
+      target (no real backend/Calendly account for a portfolio piece) —
+      a real client build would swap this for a Calendly embed.
+- [x] Wired consistently: Hero primary and the calculator's "Unlock This
+      Cash Flow" share the identical `mailto:` href + subject (per
+      PLAN.md: the calculator CTA ties directly to the same conversion
+      action); Bottom CTA uses the same address with a "Custom Walkthrough"
+      subject; Hero's secondary CTA is the one true in-page anchor
+      (`#calculator`).
+- [x] `src/components/Button.tsx` — mailto:/external hrefs now render a
+      plain `<a>` instead of `next/link`'s `<Link>` (which is for internal
+      routes); `#anchor` and `/path` hrefs still use `Link`.
 
 ## 6. Polish Pass
 - [ ] Responsive check: mobile, tablet, desktop
