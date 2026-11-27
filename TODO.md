@@ -68,18 +68,24 @@ See PLAN.md for full context.
       copy, labels, and computed output.
 
 ## 5. CTA Targets
-- [x] Decided `mailto:demo@payflowmena.com` as the dummy demo-booking
-      target (no real backend/Calendly account for a portfolio piece) —
-      a real client build would swap this for a Calendly embed.
-- [x] Wired consistently: Hero primary and the calculator's "Unlock This
-      Cash Flow" share the identical `mailto:` href + subject (per
-      PLAN.md: the calculator CTA ties directly to the same conversion
-      action); Bottom CTA uses the same address with a "Custom Walkthrough"
-      subject; Hero's secondary CTA is the one true in-page anchor
-      (`#calculator`).
-- [x] `src/components/Button.tsx` — mailto:/external hrefs now render a
-      plain `<a>` instead of `next/link`'s `<Link>` (which is for internal
-      routes); `#anchor` and `/path` hrefs still use `Link`.
+- [x] ~~Decided `mailto:` as the dummy demo-booking target~~ — superseded:
+      all three demo-booking CTAs (Hero primary, calculator, Bottom CTA)
+      now link to a real `/demo` route instead (see below). Hero's
+      secondary CTA remains the one true in-page anchor (`#calculator`).
+- [x] `src/app/demo/page.tsx` — the lead-capture form + confirmation
+      screen designed and approved in the Claude Design prototype
+      (<https://claude.ai/artifact/M5aQHPmnyvS8XaW9PGAqZp> —
+      Confirmation.dc.html), ported into the real Next.js app as a
+      client-component route: Name/Work Email/Company/Country fields,
+      the same validation rules (required name/company, email regex),
+      and the same success state (icon, "You're all set, {firstName}!",
+      3-step "what happens next" grid, two CTAs back to the homepage).
+      Verified via the dev server: form renders with correct labels, all
+      3 homepage CTAs now point to `/demo`, `npm run build` compiles
+      clean with `/demo` as a new static route.
+- [x] `src/components/Button.tsx` — `/path` hrefs use `next/link`'s
+      `Link`; `#anchor` hrefs too; a true external/mailto: href (none
+      currently in use) would render a plain `<a>` instead.
 
 ## 6. Polish Pass
 - [x] Responsive check: mobile, tablet, desktop — code-level audit (no

@@ -8,7 +8,7 @@ export function BottomCta() {
         Ready to Cut Your Receivables Time in Half?
       </h2>
       <Button
-        href="mailto:demo@payflowmena.com?subject=Custom%20Walkthrough%20Request"
+        href="/demo"
         size="large"
         variant="primary"
         className="w-full justify-center text-center sm:w-auto"

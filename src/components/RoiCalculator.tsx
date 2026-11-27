@@ -109,10 +109,7 @@ export function RoiCalculator() {
           </p>
         </div>
 
-        <Button
-          href="mailto:demo@payflowmena.com?subject=15-Minute%20Demo%20Request"
-          variant="primary"
-        >
+        <Button href="/demo" variant="primary">
           Unlock This Cash Flow →
         </Button>
       </motion.div>

@@ -17,7 +17,7 @@ export function Hero() {
       </p>
       <div className="flex w-full flex-col items-center gap-md16 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center">
         <Button
-          href="mailto:demo@payflowmena.com?subject=15-Minute%20Demo%20Request"
+          href="/demo"
           size="large"
           variant="primary"
           className="w-full justify-center text-center sm:w-auto"
