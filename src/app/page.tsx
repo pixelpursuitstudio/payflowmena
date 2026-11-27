@@ -1,4 +1,5 @@
 import { BottomCta } from "@/components/BottomCta";
+import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { ProblemSolution } from "@/components/ProblemSolution";
 import { RoiCalculator } from "@/components/RoiCalculator";
@@ -12,6 +13,7 @@ export default function Home() {
       <ProblemSolution />
       <RoiCalculator />
       <BottomCta />
+      <Footer />
     </>
   );
 }

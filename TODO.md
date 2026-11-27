@@ -111,7 +111,14 @@ See PLAN.md for full context.
       server.
 
 ## 7. Deploy & Present
-- [ ] Deploy to production Vercel URL
+- [x] Deploy to production Vercel URL — Vercel's Git integration
+      auto-deploys every push to `master` as production; confirmed
+      <https://payflowmena.vercel.app> is live and serving the
+      Phase 3–6 build (verified title, OG tags, all four sections,
+      and the calculator's rendered output in the production HTML).
 - [ ] Write case-study copy for portfolio (problem → rationale → calculator →
       why it converts)
-- [ ] Add disclosure note that PayFlow MENA is a fictional concept piece
+- [x] Add disclosure note that PayFlow MENA is a fictional concept piece —
+      `src/components/Footer.tsx`, shown on every page load (not hidden in
+      a case-study doc only), so the live demo itself is honest about
+      what it is.
