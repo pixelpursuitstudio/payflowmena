@@ -14,8 +14,8 @@ const variantClasses: Record<ButtonVariant, string> = {
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
-  medium: "py-sm px-lg text-base",
-  large: "py-md px-xl text-lg",
+  medium: "py-sm8 px-lg24 text-base",
+  large: "py-md16 px-xl32 text-lg",
 };
 
 type CommonProps = {

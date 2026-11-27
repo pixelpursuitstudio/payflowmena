@@ -10,7 +10,7 @@ export function Card({ title, children, className = "" }: CardProps) {
   return (
     <div
       className={[
-        "flex flex-col gap-sm rounded-lg border border-border-default bg-bg-primary p-xl",
+        "flex flex-col gap-sm8 rounded-lg border border-border-default bg-bg-primary p-xl32",
         className,
       ].join(" ")}
     >

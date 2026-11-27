@@ -3,7 +3,7 @@ import { Section } from "./Section";
 
 export function Hero() {
   return (
-    <Section className="flex flex-col items-center gap-lg text-center">
+    <Section className="flex flex-col items-center gap-lg24 text-center">
       <p className="text-sm font-semibold uppercase tracking-wide text-accent-default">
         For Finance Teams in UAE &amp; India
       </p>
@@ -15,7 +15,7 @@ export function Hero() {
         reconciliation (AED, SAR, INR), and instant payment links&mdash;built
         for growing B2B teams.
       </p>
-      <div className="flex w-full flex-col items-center gap-md sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center">
+      <div className="flex w-full flex-col items-center gap-md16 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center">
         <Button
           href="mailto:demo@payflowmena.com?subject=15-Minute%20Demo%20Request"
           size="large"

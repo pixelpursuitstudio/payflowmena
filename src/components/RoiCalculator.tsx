@@ -51,20 +51,20 @@ export function RoiCalculator() {
   const daysId = useId();
 
   return (
-    <Section id="calculator" className="flex flex-col items-center gap-xl">
+    <Section id="calculator" className="flex flex-col items-center gap-xl32">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="flex w-full max-w-2xl flex-col items-center gap-xl rounded-lg border border-border-default bg-bg-primary p-lg sm:p-xl"
+        className="flex w-full max-w-2xl flex-col items-center gap-xl32 rounded-lg border border-border-default bg-bg-primary p-lg24 sm:p-xl32"
       >
         <h2 className="max-w-lg text-center text-2xl font-semibold text-text-primary sm:text-3xl">
           How Much Cash Is Stuck in Your Unpaid Invoices?
         </h2>
 
-        <div className="flex w-full flex-col gap-sm">
-          <div className="flex items-baseline justify-between gap-sm text-sm text-text-primary sm:text-base">
+        <div className="flex w-full flex-col gap-sm8">
+          <div className="flex items-baseline justify-between gap-sm8 text-sm text-text-primary sm:text-base">
             <label htmlFor={revenueId}>Average Monthly Revenue</label>
             <span className="font-semibold whitespace-nowrap">
               {currency.format(revenue)}
@@ -82,8 +82,8 @@ export function RoiCalculator() {
           />
         </div>
 
-        <div className="flex w-full flex-col gap-sm">
-          <div className="flex items-baseline justify-between gap-sm text-sm text-text-primary sm:text-base">
+        <div className="flex w-full flex-col gap-sm8">
+          <div className="flex items-baseline justify-between gap-sm8 text-sm text-text-primary sm:text-base">
             <label htmlFor={daysId}>Average Days to Get Paid</label>
             <span className="font-semibold whitespace-nowrap">{days} days</span>
           </div>
@@ -99,7 +99,7 @@ export function RoiCalculator() {
           />
         </div>
 
-        <div className="flex w-full flex-col items-center gap-xs rounded-md bg-accent-subtle px-lg py-lg text-center">
+        <div className="flex w-full flex-col items-center gap-xs4 rounded-md bg-accent-subtle px-lg24 py-lg24 text-center">
           <p className="text-base text-text-secondary">You could unlock</p>
           <p className="font-mono text-3xl font-semibold tabular-nums text-accent-default sm:text-4xl">
             {currency.format(displayedValue)}

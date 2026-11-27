@@ -8,8 +8,8 @@ type SectionProps = {
 
 export function Section({ children, className = "", id }: SectionProps) {
   return (
-    <section id={id} className={["py-4xl", className].join(" ")}>
-      <div className="mx-auto max-w-6xl px-lg">{children}</div>
+    <section id={id} className={["py-4xl96", className].join(" ")}>
+      <div className="mx-auto max-w-6xl px-lg24">{children}</div>
     </section>
   );
 }

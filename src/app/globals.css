@@ -30,14 +30,21 @@
   --color-accent-hover: var(--color-accent-hover);
   --color-accent-subtle: var(--color-accent-subtle);
 
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-2xl: 48px;
-  --spacing-3xl: 64px;
-  --spacing-4xl: 96px;
+  /*
+   * Named with their pixel value (xs4, sm8, ...) rather than plain t-shirt
+   * sizes (xs, sm, ...): Tailwind v4 resolves width-family utilities against
+   * the spacing namespace before its own built-in container namespace, so a
+   * bare "lg" key here would silently shadow the real max-w-lg (32rem) with
+   * our 24px spacing value. The pixel suffix avoids that collision.
+   */
+  --spacing-xs4: 4px;
+  --spacing-sm8: 8px;
+  --spacing-md16: 16px;
+  --spacing-lg24: 24px;
+  --spacing-xl32: 32px;
+  --spacing-2xl48: 48px;
+  --spacing-3xl64: 64px;
+  --spacing-4xl96: 96px;
 
   --radius-sm: 8px;
   --radius-md: 12px;

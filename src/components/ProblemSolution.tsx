@@ -19,7 +19,7 @@ const cards = [
 export function ProblemSolution() {
   return (
     <Section>
-      <div className="grid grid-cols-1 gap-lg sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-lg24 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((card) => (
           <Card key={card.title} title={card.title}>
             {card.body}
