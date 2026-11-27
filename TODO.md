@@ -116,8 +116,14 @@ See PLAN.md for full context.
       <https://payflowmena.vercel.app> is live and serving the
       Phase 3–6 build (verified title, OG tags, all four sections,
       and the calculator's rendered output in the production HTML).
-- [ ] Write case-study copy for portfolio (problem → rationale → calculator →
-      why it converts)
+- [x] Write case-study copy for portfolio (problem → rationale → calculator →
+      why it converts) — published as a Claude Docs case study:
+      <https://claude.ai/artifact/5JG5ivvHS15iSKvJ8Jog1T> ("PayFlow MENA —
+      Case Study"). Covers the brief, the design-first process (Figma →
+      prototype → code), a section-by-section rationale table, the
+      calculator's formula and the psychology behind it, a "why this
+      converts" synthesis, and the fictional-concept disclosure with
+      links to the live site and repo.
 - [x] Add disclosure note that PayFlow MENA is a fictional concept piece —
       `src/components/Footer.tsx`, shown on every page load (not hidden in
       a case-study doc only), so the live demo itself is honest about
