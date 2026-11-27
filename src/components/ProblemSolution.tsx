@@ -3,11 +3,11 @@ import { Section } from "./Section";
 
 const cards = [
   {
-    title: "Manual Follow-Ups",
-    body: "Replace awkward Excel tracking and manual emails with polite, automated WhatsApp & email nudges.",
+    title: "Automated WhatsApp & Email Nudges",
+    body: "Replace awkward Excel tracking and manual follow-ups with polite, automatic payment reminders your clients actually respond to.",
   },
   {
-    title: "Cross-Border Friction",
+    title: "Instant Multi-Currency Reconciliation",
     body: "Collect payments locally in AED, SAR, or INR without manual FX reconciliation headaches.",
   },
   {
