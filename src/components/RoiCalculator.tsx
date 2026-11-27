@@ -57,16 +57,16 @@ export function RoiCalculator() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="flex w-full max-w-2xl flex-col items-center gap-xl rounded-lg border border-border-default bg-bg-primary p-xl"
+        className="flex w-full max-w-2xl flex-col items-center gap-xl rounded-lg border border-border-default bg-bg-primary p-lg sm:p-xl"
       >
         <h2 className="max-w-lg text-center text-2xl font-semibold text-text-primary sm:text-3xl">
           How Much Cash Is Stuck in Your Unpaid Invoices?
         </h2>
 
         <div className="flex w-full flex-col gap-sm">
-          <div className="flex items-baseline justify-between text-base text-text-primary">
+          <div className="flex items-baseline justify-between gap-sm text-sm text-text-primary sm:text-base">
             <label htmlFor={revenueId}>Average Monthly Revenue</label>
-            <span className="font-semibold">
+            <span className="font-semibold whitespace-nowrap">
               {currency.format(revenue)}
             </span>
           </div>
@@ -83,9 +83,9 @@ export function RoiCalculator() {
         </div>
 
         <div className="flex w-full flex-col gap-sm">
-          <div className="flex items-baseline justify-between text-base text-text-primary">
+          <div className="flex items-baseline justify-between gap-sm text-sm text-text-primary sm:text-base">
             <label htmlFor={daysId}>Average Days to Get Paid</label>
-            <span className="font-semibold">{days} days</span>
+            <span className="font-semibold whitespace-nowrap">{days} days</span>
           </div>
           <input
             id={daysId}
@@ -101,7 +101,7 @@ export function RoiCalculator() {
 
         <div className="flex w-full flex-col items-center gap-xs rounded-md bg-accent-subtle px-lg py-lg text-center">
           <p className="text-base text-text-secondary">You could unlock</p>
-          <p className="font-mono text-4xl font-semibold tabular-nums text-accent-default">
+          <p className="font-mono text-3xl font-semibold tabular-nums text-accent-default sm:text-4xl">
             {currency.format(displayedValue)}
           </p>
           <p className="text-base text-text-secondary">

@@ -82,9 +82,33 @@ See PLAN.md for full context.
       routes); `#anchor` and `/path` hrefs still use `Link`.
 
 ## 6. Polish Pass
-- [ ] Responsive check: mobile, tablet, desktop
-- [ ] Lighthouse: performance, accessibility, SEO
-- [ ] Favicon, meta title/description, OG image
+- [x] Responsive check: mobile, tablet, desktop — code-level audit (no
+      visual screenshot tool available in this sandbox; browser automation
+      installs were blocked). Fixed real overflow risks found on review:
+      Hero/Bottom CTA buttons stack full-width below `sm` instead of
+      risking text overflow in a pill shape; calculator card padding and
+      slider label text shrink below `sm`; slider value labels got
+      `whitespace-nowrap` so they can't wrap awkwardly against their label.
+      All grid/flex layouts (`ProblemSolution`, `SocialProof`) already
+      collapse to one column / wrap naturally.
+- [ ] Lighthouse: performance, accessibility, SEO — **not run**: this
+      sandbox blocks installing/launching Playwright or a Lighthouse CLI
+      via npx. Addressed what a manual audit covers instead: semantic
+      heading order (one `h1`, `h2`s per section, `h3`s in cards), slider
+      `aria-label`s, `:focus-visible` states inherited from the design
+      system, `next/font` self-hosting (no render-blocking font requests),
+      and fully static prerendering (confirmed via `npm run build`
+      output — every route is `○ (Static)`). Recommend running Lighthouse
+      from the deployed Vercel URL or local Chrome DevTools to confirm
+      scores before presenting.
+- [x] Favicon — `src/app/icon.svg` (teal rounded square, pill-motif mark,
+      matches the design system's brand mark). Meta title/description +
+      Open Graph/Twitter card metadata in `src/app/layout.tsx`.
+      `src/app/opengraph-image.tsx` generates a 1200×630 OG image at
+      build time, mirroring the Claude Design System's Cover design
+      (teal identity slab + pill pattern + wordmark). Verified both
+      `/icon.svg` and `/opengraph-image` render correctly via the dev
+      server.
 
 ## 7. Deploy & Present
 - [ ] Deploy to production Vercel URL

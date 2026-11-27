@@ -11,6 +11,7 @@ export function BottomCta() {
         href="mailto:demo@payflowmena.com?subject=Custom%20Walkthrough%20Request"
         size="large"
         variant="primary"
+        className="w-full justify-center text-center sm:w-auto"
       >
         Schedule Your Custom Walkthrough
       </Button>
