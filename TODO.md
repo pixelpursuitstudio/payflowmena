@@ -33,19 +33,39 @@ See PLAN.md for full context.
       exactly. Route removed after verification.
 
 ## 3. Sections (static content)
-- [ ] Hero — eyebrow, headline, subheadline, primary + secondary CTA
-- [ ] Social proof bar — 4 grayscale placeholder logos + trust line
-- [ ] Problem vs. Solution — 3-column grid (Manual Follow-Ups, Cross-Border
-      Friction, Zero Cash-Flow Blindspots)
-- [ ] Bottom CTA banner — headline + "Schedule Your Custom Walkthrough"
+- [x] Hero — `src/components/Hero.tsx`: eyebrow, headline, subheadline,
+      primary CTA ("Book a 15-Min Live Demo") + secondary CTA (anchor-scrolls
+      to `#calculator`, wired ahead of Phase 4). Copy ported from the
+      approved Claude Design prototype for consistency.
+- [x] Social proof bar — `src/components/SocialProof.tsx`: trust line + 4
+      grayscale text-wordmark placeholder logos with hover color-in.
+- [x] Problem vs. Solution — `src/components/ProblemSolution.tsx`: 3-column
+      `Card` grid (Manual Follow-Ups, Cross-Border Friction, Zero Cash-Flow
+      Blindspots), responsive down to 1 column on mobile.
+- [x] Bottom CTA banner — `src/components/BottomCta.tsx`: headline +
+      "Schedule Your Custom Walkthrough".
+- [x] Assembled in `src/app/page.tsx`; `npm run build` compiles clean and
+      dev-server HTML confirmed to contain all four sections' copy.
+      CTA buttons use a `mailto:` placeholder for now — final target is
+      Phase 5's job.
 
 ## 4. ROI Calculator (centerpiece)
-- [ ] Build calculator component shell (title, two sliders, output box)
-- [ ] Implement formula: `monthlyRevenue × (daysToGetPaid − 15) / 30 × 0.6`
-- [ ] Live update on slider drag (debounced)
-- [ ] Animated count-up on output figure (Framer Motion)
-- [ ] Currency formatting
-- [ ] "Unlock This Cash Flow" CTA wired to same demo-booking target as hero CTA
+- [x] `src/components/RoiCalculator.tsx` — title, two range sliders (revenue
+      $10k–$500k, days 15–90), output box, `id="calculator"` (matches the
+      Hero secondary CTA's anchor).
+- [x] Formula: `monthlyRevenue × max(0, daysToGetPaid − 15) / 30 × 0.6`,
+      rounded to the nearest $100 — verified via rendered HTML: $120,000 @
+      45 days → $72,000.
+- [x] Live update on slider drag; the displayed figure eases toward the new
+      target over 280ms (Framer Motion `animate()` on a motion value) rather
+      than jumping, which smooths rapid drags without a separate debounce.
+- [x] Animated count-up via Framer Motion, skipped in favor of an instant
+      jump when `prefers-reduced-motion: reduce`.
+- [x] Currency formatting via `Intl.NumberFormat`.
+- [x] "Unlock This Cash Flow" CTA uses the same `mailto:` demo-booking
+      target as the Hero's primary CTA.
+- [x] `npm run build` compiles clean; dev-server HTML confirmed correct
+      copy, labels, and computed output.
 
 ## 5. CTA Targets
 - [ ] Decide dummy target for CTAs (Calendly embed placeholder vs. mailto vs. anchor)
